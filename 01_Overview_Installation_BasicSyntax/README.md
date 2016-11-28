@@ -5,6 +5,7 @@
 Python is a general-purpose, interpreted, high-level, dynamic programming language.
 Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
 
+<<<<<<< 9d7b193796884a1ae2e1eed615f69a158fc6290a
 ### Advantages of Python
 
 Most of the advantage of **Python** involves his _interpreted_ nature, but at the same time it offers a big set of options to develop:
