@@ -5,7 +5,6 @@
 Python is a general-purpose, interpreted, high-level, dynamic programming language.
 Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
 
-<<<<<<< 9d7b193796884a1ae2e1eed615f69a158fc6290a
 ### Advantages of Python
 
 Most of the advantage of **Python** involves his _interpreted_ nature, but at the same time it offers a big set of options to develop:
@@ -32,11 +31,9 @@ Let's add that you can fix this issue/problem recompiling the full interpreter t
 
 Other problem that you eventually find is that the versioning is a mess and you have to decide if you are going to work with **Python 2** or **Python 3** or maybe a flavor of python (like Jython or Cython or some hybrid beast that allows you to run pseudo python code mixed with other stuff). And once you decide, you cannot mix ~~(well, actually you can but is messy)~~ _python 2 code_ with _python 3 code_ and this has been a known issue for a lot of time.
 
-## Python Implementation/Timeline
+## Python Implementation
 
-### Implementation
-
-### Timeline
+## Python Timeline
 
 ## Installing Python
 
