@@ -31,9 +31,11 @@ Let's add that you can fix this issue/problem recompiling the full interpreter t
 
 Other problem that you eventually find is that the versioning is a mess and you have to decide if you are going to work with **Python 2** or **Python 3** or maybe a flavor of python (like Jython or Cython or some hybrid beast that allows you to run pseudo python code mixed with other stuff). And once you decide, you cannot mix ~~(well, actually you can but is messy)~~ _python 2 code_ with _python 3 code_ and this has been a known issue for a lot of time.
 
-## Python Implementation
+## Python Implementation/Timeline
 
-## Python Timeline
+### Implementation
+
+### Timeline
 
 ## Installing Python
 
