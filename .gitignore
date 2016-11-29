@@ -89,4 +89,4 @@ ENV/
 .ropeproject
 
 *.backup
-.idea/workspace.xml
+.idea
