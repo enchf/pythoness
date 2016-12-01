@@ -3,8 +3,8 @@
 A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ̶ ̶D̶e̶l̶p̶h̶i̶  Python.
 
 This repository is intended to work as an introduction to the foundations of Python Programming Language.
-It has been created under the initiative of Sinuhé Valencia (Sier - [https://github.com/sierisimo]) and Ernesto 
-Espinosa ([https://github.com/enchf]).
+It has been created under the initiative of [Sinuhé Valencia](https://github.com/sierisimo) and [Ernesto 
+Espinosa](https://github.com/enchf).
 
 ## Contents
 
@@ -27,7 +27,7 @@ Personal training can be conducted by any of the project creators. Just contact 
  * [Sier](https://www.linkedin.com/in/sierisimo)
  * [Ernesto](www.linkedin.com/in/ernestoespinosach)
  
- ## License & Copyright
+## License & Copyright
 
 The materials herein are all (c) 2016 Sier Valencia/Ernesto Espinosa.
 
