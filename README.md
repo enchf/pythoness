@@ -3,7 +3,7 @@
 A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ̶ ̶D̶e̶l̶p̶h̶i̶  Python.
 
 This repository is intended to work as an introduction to the foundations of Python Programming Language.
-It has been created under the initiative of [Sinuhé Valencia](https://github.com/sierisimo) and [Ernesto 
+It has been created under the initiative of [Sier Valencia](https://github.com/sierisimo) and [Ernesto 
 Espinosa](https://github.com/enchf).
 
 ## Contents
@@ -14,11 +14,11 @@ Espinosa](https://github.com/enchf).
 * [Data Types](types/README.md) - Data Types, Strings, Iterable Objects, Functions, Variables Scope, Returning Values. 
 * [Modules](modules/README.md) - Modules, Namespaces, Packages.
 * [OOP](oop/README.md) - Object Oriented Programming, Classes, Objects.
-* [Debug & Troubleshooting](debug/README.md) - Pdb, Logs, breakpoints, remote debugging.
-* [Unit Testing](unittest/README.md) - Unittest module, Assertions, Test Suites.
 * [Exception Handling](exceptions/README.md) - Exception handling and hierarchy.
 * [Regular Expressions](regex/README.md) - Regex meta-characters, patterns, RE objects, matching without RE objects.
 * [Standard Library](std/README.md) - Sys, STDIO, External Programs, IO, Email, Network and HTTP, Dates, Zip Files.
+* [Debug & Troubleshooting](debug/README.md) - Pdb, Logs, breakpoints, remote debugging.
+* [Unit Testing](unittest/README.md) - Unittest module, Assertions, Test Suites.
 
 ## In-Person Training
 
