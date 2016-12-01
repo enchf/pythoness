@@ -616,3 +616,34 @@ when is Friday:
 ```
 
 This example shows some _pseudo code_ to represent a block of code. We don't go for burritos unless it's Wednesday and we don't go for beers unless it's Friday. That execution will only happen when the day is right and in no other case. In here we see that the blocks belongs to a pre-condition. This will be more comprehensible when we touch "Control flow" topic.
+
+## Comments
+
+A comment is a section in the code that contains human-readable content, generally used to explain some reason to the code to exists or to clarify some part. This part of code also helps you to add license or to add useful information about things related to the code.
+
+Most of the time you will be writing only code and code and not taking care about comments. This is considered a very bad and ugly practice, because comments will help you in the future to understand your own code and also will help other in case they continue your project once you left the developing or once they want to get involved. Also you have to be careful with comments, because you have to provide useful information about what the code does, if you don't take care of this you eventually encounter with a lot of explanations of code and no code at all.
+
+You can read a more detailed reason on why it's good to write comments in any book of programming, once that I feel it's great is "Clean code" like [this](http://www.informit.com/articles/article.aspx?p=1326509)
+
+### General comments
+
+A comment in python starts with the character `#` as you see in the past chapters/topics we used this characteristic to denote things that aren't related to the real logic and as you can see (and we expect) that comments were useful to understand what the author tries to refer (~~so meta~~). If you want to put multiline comments, you must provide a `#` in every line you want to write a comment. Like this:
+
+```
+# this is the start of a comment
+# this is the second line of the comment
+# this is the third line of the comment
+# ...
+# ...
+# this is the nth line of the comment
+(actual code)
+```
+
+### Function and class documentation comments
+
+Pythons allows you to define something called _documentation comments_ this kind of comments are actual code, and they represent something accessible in execution time. This means that _general comments_ aren't available for the final program but _documentation comments_ are.
+
+This kind of comments are represented with a triple `"` and they have to be in a certain _**scope**_ to represent documentation about that scope.
+
+This will be the preferred method to document in the future examples when a comment should be in a scope.
+
