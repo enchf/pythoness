@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/enchf/pythoness.png?label=ready&title=Ready)](https://waffle.io/enchf/pythoness)
 # Pythoness
-A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ̶ ̶D̶e̶l̶p̶h̶i̶  Python.
+A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ~~Delphi~~ Python.
 
 This repository is intended to work as an introduction to the foundations of Python Programming Language.
 It has been created under the initiative of [Sier Valencia](https://github.com/sierisimo) and [Ernesto 
@@ -8,8 +8,8 @@ Espinosa](https://github.com/enchf).
 
 ## Contents
 
-* [Overview](overview/README.md) - Overview, Installation, IDE's, Scripting in different OS.
-* [Basic Language Syntax](basics/README.md) - Identifiers, reserved words, operators, indentation, comments.
+* [Overview](01_Overview_Installation_BasicSyntax/README.md) - Overview, Installation, IDE's, Scripting in different OS.
+* [Basic Language Syntax](02_Syntax/README.md) - Identifiers, reserved words, operators, indentation, comments.
 * [Control Structures](control/README.md) - Variables, Flow control, Loops.
 * [Data Types](types/README.md) - Data Types, Strings, Iterable Objects, Functions, Variables Scope, Returning Values. 
 * [Modules](modules/README.md) - Modules, Namespaces, Packages.
