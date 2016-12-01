@@ -562,3 +562,57 @@ c = 3
 11. is, is not (The second one counts as one operator)
 12. in, not in (The second one counts as one operator)
 13. not, or, and
+
+## Indentation
+
+In python you need to be careful with the _style_ of your code because python doesn't manage scopes as other languages.
+The scope in python depends on where is the code starting and how many spaces/tabs are you using. Now that we mention the _tabs vs spaces war_ you should start using spaces... why? because is more _**pythonic**_ and you can read about it [here in the PEP-008](https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces)
+
+**Once you start coding you cannot mix the way you indent, so if you choose to use tabs instead of spaces (~~don't~~) you cannot go back unless you change every part of the code where you put tabs. This also applies to the number of spaces, if you choose to use 2 instead of 4, you are going to change everything when you decide to use another number of spaces.**
+
+But well... once we clarified that **4 SPACES IS THE COOLEST THING** we can talk about the scope and blocks of code.
+
+### Scope
+
+The scope is where something is valid/lives. This means, that if I ask you about Sier or Ernesto, you'll know that we're talking about the authors of this text, but if I ask you for Jossue maybe you'll get confused because maybe you know someone called Jossue that I don't or maybe you don't know any Jossue at all. That's scope! (~~you can think of scope as context~~)
+
+Some special things in python have their own scope and you need to indent ~~preferably with 4 spaces~~ to specify that some code is related to certain scope.
+
+Let's look to an _non-code_/_pseudo-code_ example:
+
+```
+# Imagine that using "declare" we can create a person:
+declare sier
+declare ernesto
+
+# Now imagine that using "group" we can talk with people in a certain group
+group friends:
+	# This line is inside of the "friends" scope
+    sier is awesome # True
+    ernesto is cool # True
+    
+    declare chacon
+    
+    chacon is cool # True
+    
+ # Outside of the "friends scope"
+chacon is cool # This will fail, because chacon only exists inside friends.
+```
+
+This will be totally explained and more detailed in the "Data types" topic and in the "OOP" topic.
+
+### Blocks 
+
+As well as the **scope** we can have a "blocks" of code, which represent that certain part of the code will only work if is inside a certain part.
+
+This sounds dizzy but is easier to see with another non-code example:
+
+```
+when is Wednesday:
+    go_for_burritos()
+    
+when is Friday:
+    go_for_beers()
+```
+
+This example shows some _pseudo code_ to represent a block of code. We don't go for burritos unless it's Wednesday and we don't go for beers unless it's Friday. That execution will only happen when the day is right and in no other case. In here we see that the blocks belongs to a pre-condition. This will be more comprehensible when we touch "Control flow" topic.
