@@ -1,7 +1,207 @@
 # Python Language Syntax
 
 So far we have seen some features and important things on the language, but we haven't seen the language by itself.
-This chapter introduces the most common elements of the language python syntax. 
+This chapter introduces the most common elements of the language python syntax.
+
+## Identifiers
+
+As a high-level language, python has the advantage of using variables, this allows you to hold a certain variable value in a named reference. For example, if you create a program which asks users for their name, every user that uses your program will be putting something different and if you want to use that value in another part of your program like in a message, a toast or maybe a profile, you need to hold that value at least one time and wait for the need of using it.
+
+Well, python allows the naming of variable with certain characteristics. This is easy to remember, because you don't need to remember a lot of rules.
+
+This rules are only 5 and they are easy to remember:
+
+1. Identifiers can be a combination of letters in lowercase (a to z) or uppercase (A to Z) or digits (0 to 9) or an underscore (_).
+2. Adding to the first rule: Identifiers **CANNOT** start with a digit.
+3. Reserved words/Keywords (more on this ahead) **CANNOT** be used as identifiers.
+4. **NO** special characters/symbols can be used as identifiers.
+5. Identifiers can be of **ANY** length
+
+### Case sensitivity
+
+It's important to notice that python is a *case sensitive* language, this means that a identifier like: `var_user_name1` it's different from: `var_USER_name1` and also different from: `Var_user_name1` and so on.
+
+## Reserved Words / Keywords
+
+We mentioned previously that python contains some words that cannot be used as identifiers, this means that this group of words already have a meaning on the language and using them as identifiers could lead to mistakes when operating. 
+For this reason, python doesn't allow you the usage of this words, and it's important to know which words are available or not.
+
+Python provides a module called `keyword` that contains a list of this defined words. Don't worry if you don't get this code right now, it's here only to exemplify:
+
+```python
+# Yes, you have a module to check for keywords...
+import keyword
+
+# And you can obtain the full list for your python installation
+for word in keyword.kwlist:
+    print(word)
+```
+
+This will give us all the reserved words:
+
+* False
+* None
+* True
+* and
+* as
+* assert
+* break
+* class
+* continue
+* def
+* del
+* elif
+* else
+* except
+* finally
+* for
+* from
+* global
+* if
+* import
+* in
+* is
+* lambda
+* nonlocal
+* not
+* or
+* pass
+* raise
+* return
+* try
+* while
+* with
+* yield
+
+As you can see, there are a lot of reserved words, we'll try to explain their usage.
+
+##### False
+
+Word used for boolean and logical operations. This denotes when something is false, like in the sentence: `the red color is blue`.
+
+##### None
+
+This word has a special meaning in python, because it's used as a result for operations that didn't returned something, or when trying to represent something that exists but it's empty.
+
+##### True
+
+Used as a boolean or logical result, denotes when something is true, like in the sentence: `the word "dog" starts with a "d"`.
+
+##### and
+
+Used as an operator on logical operations, this word will be explained on the "logical operator" section.
+
+##### as
+
+This word is used to give an alias to a module, this will be explained in the modules section.
+
+##### assert
+
+The assert keyword is used for debugging purposes. We can use it for testing conditions that are obvious to us. For example, we have a program that calculates salaries. We know that the salary cannot be less than zero. So we might put such an assertion to the code. If the assertion fails, the interpreter will complain. More on this on the Unit Testing section.
+
+##### break
+
+We use break when we are on loops or in some block of code inside a loop and we want to stop the execution of the subsequent iterations. This will be explained in the "loops" section.
+
+##### class
+
+This word is used to define a class in python, this sounds redundant right now, but will be explained on the OOP section.
+
+##### continue
+
+It is used to interrupt the current cycle, without jumping out of the whole cycle. It initiates a new iteration in the same cycle if possible.
+
+##### def
+
+This word is used to define functions and methods. This will be explained in other topics.
+
+##### if
+
+The word if works with an expression, when the expression is valid and his value is `True` then the block below the if is executed. This will be explained in the "Control flow" topic.
+
+##### elif 
+
+Works similar to the `if`, but it needs to be a compliment for an if statement. More of this on the "control flow" topic.
+
+##### else
+
+This word is used with an if statement, when the expression after the `if` is not `True` the block after the else is executed. More on this in the "Control flow" topic.
+
+##### except
+
+This word is used when you need to work with an Exception, this will be explained in the "Exception Handling" topic.
+
+##### finally
+
+This word is used when you need to work with an Exception, this will be explained in the "Exception Handling" topic.
+
+##### for
+
+Used to denote a loop. More on the "Control flow" topic.
+
+###### from
+
+Used to import a certain part of a module, more on this on the "Modules" topic.
+
+##### global
+
+If we want to access variables defined outside functions, we use the global keyword.
+
+##### import
+
+Used to import a module, more on this on the "Modules" topic.
+
+##### in
+
+Used to check if some value is inside a structure. More of this in the "Operators" topic.
+
+##### is
+
+Used to check if some value correspond to certain class or is from certain type. More of this in the "Operators" topic.
+
+##### lambda
+
+The lambda keyword creates a new anonymous function. More of this on the "Data types" topic.
+
+##### nonlocal 
+
+Used to bind a variable in inner functions to a different scope. More of this in the "Control Structures" topic.
+
+##### not
+
+Used as a logical operator, more of this in the "Operators" module.
+
+##### or
+
+Used as a logical operator, more of this in the "Operators" module.
+
+##### pass
+
+Used to denote that some part of code will not do anything, more of this in the "Data types" topic.
+
+##### raise
+
+This word is used when an exception is needed, this will be explained in the "Exception Handling" topic.
+
+##### return
+
+Used to pass a value from a function to the caller of the function. More of this in the "Control Structures" topic.
+
+##### try
+
+This word is used when you need to work with some code that eventually `raise` and Exception, this will be explained in the "Exception Handling" topic.
+
+##### while
+
+Used to denote a loop. More on the "Control flow" topic.
+
+##### with
+
+Used to change the context of a block of code. More on the "Control flow" topic.
+
+##### yield
+
+This keyword is used with generators. Will be explained in detail in the "Data types" topic.
 
 ## Basic Operators
 
@@ -362,25 +562,3 @@ c = 3
 11. is, is not (The second one counts as one operator)
 12. in, not in (The second one counts as one operator)
 13. not, or, and
-
-## Data types
-
-### Built-in
-
-* Booleans (True, False)
-* Numbers (int, long, float, complex)
-* Strings ("...", '...')
-* Lists (Anything that is listed between \[\] and separated with a comma for example: `[1, 3.0, 5, True, "Sier"]`). _more on lists later_ 
-* Tuple (A tuple is like a list, but with the difference that a tuple is inmutable and is denoted with  `(...)` instead of `[]`). _more on tuples later_
-* Dictionary (A dictionary is a data type that works as map or an assignment between "keys" and "values", they are denoted with `{}`). _more on dictionaries later_
-
-
-#### Numbers
-
-Numbers represent mathematic values, this mean numbers in general, the most common are the **int** and the **float** which represents the common values that appears in operations. When a numbers is to big to fit in a int it is transformed automatically into a _long_ which is a big number, it also can be represented as an octal notation or a number finished with an "L".
-
-Float numbers also are represented with exponential notation. For example 32.9+e21 
-
-Complex numbers involve a _real_ and an _imaginary_ part, this numbers have different operations and are available in python as a native data type. This kind of numbers are written like `R + Ij` where _R_ represents the _real_ part with a `+` and the _imaginary_ part in this case, noted by a _I_. The _imaginary_ part is a real number which must also include a _j_ to denote that is the imaginary part, this _j_ could also be upper case.  
-
- 

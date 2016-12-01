@@ -9,7 +9,7 @@ Espinosa ([https://github.com/enchf]).
 ## Contents
 
 * [Overview](overview/README.md) - Overview, Installation, IDE's, Scripting in different OS.
-* [Basic Language Syntax](basics/README.md) - Identifiers, reserved words, indentation, comments.
+* [Basic Language Syntax](basics/README.md) - Identifiers, reserved words, operators, indentation, comments.
 * [Control Structures](control/README.md) - Variables, Flow control, Loops.
 * [Data Types](types/README.md) - Data Types, Strings, Iterable Objects, Functions, Variables Scope, Returning Values. 
 * [Modules](modules/README.md) - Modules, Namespaces, Packages.
