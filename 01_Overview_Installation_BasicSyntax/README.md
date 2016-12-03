@@ -22,11 +22,12 @@ Also the language by itself offers other things, beign _intepreted_ allows the l
 * Allow explicit type definition as well as IMPLICIT typing
 * OS Independent
 
-But not all can be sugar and honey, python also has his disadvantages and they are explained next
+But not all can be sugar and honey, Python also has his disadvantages and they are explained next
 
 ### Disadvantages
 
-Beign _interpreted_ makes the language great, but also makes the language to be slower or "interpreter dependant", which means that the language will work as fast as the interpreter allows. 
+Being _interpreted_ makes the language great, but also makes the language to be slower or "interpreter dependant", which means that the language will work as fast as the interpreter allows.
+
 Let's add that you can fix this issue/problem recompiling the full interpreter to make a better performance and also the interpreter by itself makes optimization on the fly like _caching_, that makes the language faster.
 
 Other problem that you eventually find is that the versioning is a mess and you have to decide if you are going to work with **Python 2** or **Python 3** or maybe a flavor of python (like Jython or Cython or some hybrid beast that allows you to run pseudo python code mixed with other stuff). And once you decide, you cannot mix ~~(well, actually you can but is messy)~~ _python 2 code_ with _python 3 code_ and this has been a known issue for a lot of time.

@@ -25,7 +25,7 @@ Espinosa](https://github.com/enchf).
 Personal training can be conducted by any of the project creators. Just contact us through LinkedIn:
  
  * [Sier](https://www.linkedin.com/in/sierisimo)
- * [Ernesto](www.linkedin.com/in/ernestoespinosach)
+ * [Ernesto](https://www.linkedin.com/in/ernestoespinosach)
  
 ## License & Copyright
 
