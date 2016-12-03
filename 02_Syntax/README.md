@@ -37,6 +37,8 @@ for word in keyword.kwlist:
     print(word)
 ```
 
+_Check the file in this directory called **Keywords.py** if you want to check by yourself_
+
 This will give us all the reserved words:
 
 * False
