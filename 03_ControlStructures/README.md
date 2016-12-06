@@ -56,3 +56,10 @@ With this in mind you can start imaging how much possibilities this open like as
 ## Flow Control
 
 Software doesn't have a single task usually and you don't get the output on the screen always and also as we saw before on the indentation parts, sometimes the execution have to be related to a context or to a certain state of the software. Python contains some keywords and operations that will help you to organize your code better and to give more options to the execution.
+
+
+### if...else
+
+The first kind of _flow control_ is the _if_. 
+
+What 
