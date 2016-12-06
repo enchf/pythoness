@@ -1,33 +1,29 @@
 [![Stories in Ready](https://badge.waffle.io/enchf/pythoness.png?label=ready&title=Ready)](https://waffle.io/enchf/pythoness)
 # Pythoness
-A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ̶ ̶D̶e̶l̶p̶h̶i̶  Python.
+A repository believed to be possessed by a soothsaying spirit, as the priestess of Apollo at ~~Delphi~~ Python.
 
-This repository is intended to work as an introduction to the foundations of Python Programming Language.
-It has been created under the initiative of Sinuhé Valencia (Sier - [https://github.com/sierisimo]) and Ernesto 
-Espinosa ([https://github.com/enchf]).
+What this _Python Course_ has different from the others? This repository is intended to work as an introduction to the 
+foundations of Python Programming Language, focused on _Devops_ tasks. It has been created under the initiative of 
+[Sier Valencia](https://github.com/sierisimo) and [Ernesto Espinosa](https://github.com/enchf).
 
 ## Contents
 
-* [Overview](overview/README.md) - Overview, Installation, IDE's, Scripting in different OS.
-* [Basic Language Syntax](basics/README.md) - Identifiers, reserved words, operators, indentation, comments.
-* [Control Structures](control/README.md) - Variables, Flow control, Loops.
-* [Data Types](types/README.md) - Data Types, Strings, Iterable Objects, Functions, Variables Scope, Returning Values. 
-* [Modules](modules/README.md) - Modules, Namespaces, Packages.
-* [OOP](oop/README.md) - Object Oriented Programming, Classes, Objects.
-* [Debug & Troubleshooting](debug/README.md) - Pdb, Logs, breakpoints, remote debugging.
-* [Unit Testing](unittest/README.md) - Unittest module, Assertions, Test Suites.
-* [Exception Handling](exceptions/README.md) - Exception handling and hierarchy.
-* [Regular Expressions](regex/README.md) - Regex meta-characters, patterns, RE objects, matching without RE objects.
-* [Standard Library](std/README.md) - Sys, STDIO, External Programs, IO, Email, Network and HTTP, Dates, Zip Files.
+* [Overview](01_Overview/README.md) - Overview, Installation, Tools (pyenv, virtualenv), Modules (pip, others).
+* [Basic Language Syntax](02_Syntax/README.md) - Identifiers, reserved words, operators, indentation, comments, variables.
+* [Control Structures](03_ControlStructures/README.md) - Flow control, Loops, Comprehension Lists.
+* [Data Types](04_Types/README.md) - Strings, Arrays, Dictionaries, Functions & Scopes, Lambdas, Exceptions, Regex. 
+* [Modules](05_Modules/README.md) - Modules, Namespaces, Packages.
+* [Standard Library](06_StdLib/README.md) - Sys, STDIO, External Programs, IO, Email, Network and HTTP, Dates, Zip Files.
+* [Debug & Unit Testing](07_Debug_Test/README.md) - Unittest, Logs, Debug Tools.
 
 ## In-Person Training
 
 Personal training can be conducted by any of the project creators. Just contact us through LinkedIn:
  
  * [Sier](https://www.linkedin.com/in/sierisimo)
- * [Ernesto](www.linkedin.com/in/ernestoespinosach)
+ * [Ernesto](https://www.linkedin.com/in/ernestoespinosach)
  
- ## License & Copyright
+## License & Copyright
 
 The materials herein are all (c) 2016 Sier Valencia/Ernesto Espinosa.
 
