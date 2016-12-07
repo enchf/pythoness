@@ -48,11 +48,15 @@ messy)~~ _Python 2 code_ with _Python 3 code_, as per the controversy detailed a
 
 ## Installing Python
 
-### *NIX
+If your OS doesn't provide you with a Python installation, you can get it from multiple sources.
 
-### Mac OS
+* Windows: Install it using an executable file, obtained from [Python Website](https://python.org/downloads). 
+* *NIX: Install using the package manager, get the commands and guides from [Python Documentation](https://docs.python.org/3/using/unix.html).
+* MacOS: MacOS comes with Python 2.7 installed. [Download](https://www.python.org/downloads/mac-osx/) a pkg file or 
+using **Mac Ports** or **Homebrew** if you want to install Python 3.
 
-### Windows
+You can have both Python 2 and 3 living in your operating system. You can set aliases to make _python_ command to point
+to either version 2 or 3, as per your convenience. 
 
 ## Tools
 
