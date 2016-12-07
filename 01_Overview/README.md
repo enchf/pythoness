@@ -3,40 +3,48 @@
 ## Overview.
 
 Python is a general-purpose, interpreted, high-level, dynamic programming language.
-Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
+Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines 
+of code compared to languages such as C++ or Java. The language provides constructs intended to enable writing clear 
+programs on both a small and large scale.
 
 ### Advantages of Python
 
-Most of the advantage of **Python** involves his _interpreted_ nature, but at the same time it offers a big set of options to develop:
+Most of the advantage of **Python** involves his _interpreted_ nature, but at the same time it offers a big set of 
+options to develop:
 
 * Is Interpreted
 * Is Interactive
 * Is Object-Oriented
 * Is for Beginners
-* Can work as Functional Language
+* Can work as a Functional Language
 
-Also the language by itself offers other things, beign _intepreted_ allows the language to be:
+Also the language by itself offers other advantages, beign _intepreted_ allows the language to be:
 
 * Dynamic typed
 * Use of _type inference_
 * Allow explicit type definition as well as IMPLICIT typing
 * OS Independent
 
-But not all can be sugar and honey, Python also has his disadvantages and they are explained next
+But not all can be sugar and honey, Python also has his disadvantages and they are explained next.
 
 ### Disadvantages
 
-Being _interpreted_ makes the language great, but also makes the language to be slower or "interpreter dependant", which means that the language will work as fast as the interpreter allows.
+Being _interpreted_ makes the language great, but also makes the language to be slower or "interpreter dependant", which
+means that the language will work as fast as the interpreter do. However, let's add that you can fix this issue/problem
+recompiling the full interpreter to have better performance. Also, the interpreter by itself makes optimization on the 
+fly like _caching_, making the language faster.
 
-Let's add that you can fix this issue/problem recompiling the full interpreter to make a better performance and also the interpreter by itself makes optimization on the fly like _caching_, that makes the language faster.
-
-Other problem that you eventually find is that the versioning is a mess and you have to decide if you are going to work with **Python 2** or **Python 3** or maybe a flavor of python (like Jython or Cython or some hybrid beast that allows you to run pseudo python code mixed with other stuff). And once you decide, you cannot mix ~~(well, actually you can but is messy)~~ _python 2 code_ with _python 3 code_ and this has been a known issue for a lot of time.
-
-## Python Implementation/Timeline
-
-### Implementation
-
-### Timeline
+Another issue with the language are versions. Even if the language has not changed so much, **Python 3** is a refactor
+from version 2 with no compatibility, motivated by a clean-up of issues that were beyond a simple deprecation. To 
+get a better understanding of this change, I recommend [Nick Coghland notes about why was Python 3 made incompatible
+with Python 2](http://python-notes.curiousefficiency.org/en/latest/python3/questions_and_answers.html#why-was-python-3-made-incompatible-with-python-2)
+and also [What's New in Python 3](https://docs.python.org/3/whatsnew/3.0.html) release notes from the official documentation.
+ 
+This version subject makes you to decide about if you are going to work with **Python 2**, **Python 3**, a flavor of 
+Python (like Jython or Cython or some hybrid beast that allows you to run pseudo python code mixed with other stuff). 
+In general, Python 3 is encouraged, unless you are deploying to an environment you don't control, or working with a 
+certain package not yet compatible with Python 3. And once you decide, you cannot mix ~~(well, actually you can but is 
+messy)~~ _Python 2 code_ with _Python 3 code_, as per the controversy detailed above.
 
 ## Installing Python
 
