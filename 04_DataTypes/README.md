@@ -221,3 +221,64 @@ my_letters = list(my_name) # Will return a list with: ['S', 'i', 'e', 'r', 'i', 
 This function is helpful if you need a mutable data type or if you want to work with a list instead of your data source.
 
 #### Methods
+
+We don't want to discuss this now because it will get better when we talk about OOP. For now, **_you can think on a method as an operation that certain elements can do by itself. This means that you can ask for some work and the element will work with their own data._**.
+
+##### Dot notation 
+
+Lists have their own set of _methods_ that helps working with their data. To access this _methods_ we use the `dot notation`, this notation works like this: `element.method()` let's see what does this mean:
+
+* element -> The element that we want to use, in this case the list. 
+* . -> With the dot, we are accessing to something in the element, it's important to notice that this only work on composite/compound/complex data, like a list, that is actually a group of data.
+* method -> It's the name of the thing that we want to use, in the case of methods they are usually verbs, for example if we are using something from, let's say, a human, we can access to some action that a human can do, like eating, with: `human.eat()`
+* () -> This part denotes this is a method and no other thing, this will get clear in future topics. For now, understand that this will call an action and we actually can pass something to this action to work. Taking the last example, if we want a human to eat something we can pass it to the method with: `human.eat(a_carrot)` 
+
+Now that we understand which is a _method_ and _dot notation_ let's see what _methods_ a list have:
+
+* append(_element_) -> Add an element to the end of the list
+	
+	```
+	v = [2,4,9]
+	v.append("Sier") # [2, 4, 9, "Sier"]
+	```
+	
+* extend(_iterable_) -> Pass another _iterable_ data source and it will expand your list.
+	```
+	v = [3, 5, -1, 'perrito', 'a']
+	v.extend("Sier") # [3, 5, -1, 'perrito', 'a', 'S', 'i', 'e', 'r']
+	```
+* insert(_index_, _element_) -> Put a certain _element_ into the position indicated by _index_, if _index_ is bigger than the size of the list the _element_ is added to the end of the list otherwise the element is added in the position and the elements on the next indexes are moved one space.
+	```
+	v = [3, 5, -1, 'perrito', 'a']
+	v.insert(0,2) # [-2, 3, 5, -1, 'perrito', 'a']
+	v.insert(12, 0) # [-2, 3, 5, -1, 'perrito', 'a', 0]	
+	```
+* remove(_element_) -> Remove an _element_ from the list, if the element is not in the list an error is showed.
+	```
+	v = [3, 5, -1, 'perrito', 'a']
+	v.remove("perrito") # [-2, 3, 5, -1, 'a']
+	```
+* pop() -> Returns the last element on the list and removes it from the list. If no elements are present on the list, it shows an error.
+	```
+	v = [3, 5, -1, 'a']
+	v.pop() # 'a'
+	v # [3, 5, -1]
+	```
+* clear() -> Removes all elements from the list
+	```
+	v = [3, 5, -1, 'a']
+	v.clear() # []
+	```
+* index(_element_) -> Check for the index of a value inside of the list, if the list doesn't contain the _element_ it shows an error, else it returns an `int`
+	```
+	v = [2, 5, "Sier"]
+
+	v.index(5)
+	v.index("Ernesto")
+	```
+* count(_element_) -> Returns the number of occurrence of certain _element_ inside the list.
+	```
+	v = [2,4,2,8,0,2]
+	v.count(2) # Returns 3
+	```
+	
