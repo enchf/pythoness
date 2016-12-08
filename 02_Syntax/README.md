@@ -518,13 +518,23 @@ not "String" # False
 
 Evaluates to true if it finds a variable in the specified sequence and false otherwise.
 
-```
+```python
 # Imagine that we have a collection/sequence/list of elements denotated by: [ 1, 2, 3, ...]
 # If a value is in the list, in will return True
 
 3 in [1,2,3,4] # True because 3 is in this list
 5 in [1,2,3,4] # False, because 5 is not in the list
 ```
+
+#### Operator: del
+
+Delete/removes an element from memory.
+
+````python
+x =  4
+del x
+x # Shows an error because x was deleted
+````
 
 ### Identity Operators
 
