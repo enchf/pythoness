@@ -243,42 +243,118 @@ Now that we understand which is a _method_ and _dot notation_ let's see what _me
 	```
 	
 * extend(_iterable_) -> Pass another _iterable_ data source and it will expand your list.
-	```
+	
+	```python
 	v = [3, 5, -1, 'perrito', 'a']
 	v.extend("Sier") # [3, 5, -1, 'perrito', 'a', 'S', 'i', 'e', 'r']
 	```
+	
 * insert(_index_, _element_) -> Put a certain _element_ into the position indicated by _index_, if _index_ is bigger than the size of the list the _element_ is added to the end of the list otherwise the element is added in the position and the elements on the next indexes are moved one space.
-	```
+	
+	```python
 	v = [3, 5, -1, 'perrito', 'a']
 	v.insert(0,2) # [-2, 3, 5, -1, 'perrito', 'a']
 	v.insert(12, 0) # [-2, 3, 5, -1, 'perrito', 'a', 0]	
 	```
+	
 * remove(_element_) -> Remove an _element_ from the list, if the element is not in the list an error is showed.
-	```
+	
+	```python
 	v = [3, 5, -1, 'perrito', 'a']
 	v.remove("perrito") # [-2, 3, 5, -1, 'a']
 	```
+	
 * pop() -> Returns the last element on the list and removes it from the list. If no elements are present on the list, it shows an error.
-	```
+	
+	```python
 	v = [3, 5, -1, 'a']
 	v.pop() # 'a'
 	v # [3, 5, -1]
 	```
+	
 * clear() -> Removes all elements from the list
+	
 	```
 	v = [3, 5, -1, 'a']
 	v.clear() # []
 	```
+	
 * index(_element_) -> Check for the index of a value inside of the list, if the list doesn't contain the _element_ it shows an error, else it returns an `int`
-	```
+	
+	```python
 	v = [2, 5, "Sier"]
 
 	v.index(5)
 	v.index("Ernesto")
 	```
+	
 * count(_element_) -> Returns the number of occurrence of certain _element_ inside the list.
-	```
+	
+	```python
 	v = [2,4,2,8,0,2]
 	v.count(2) # Returns 3
 	```
+
+* sort() -> Makes the list to be sorted by the ascending and natural order of his elements. The elements must be of the same type to obtain all the elements ordered, if they aren't, then the list will try to order the elements and show an error for incompatible types. In case that an ascending order is "confusing" the list will order by the natural order of the elements.
 	
+	```python
+	v = [5,6,9,0,-1,3]
+	v.sort()
+	v # [-1, 0, 3, 5, 6, 9]
+	```
+	
+* reverse() -> Makes the list to be backwards of his original state. This means that last element now it's the first and first it's the last an so on. This could be useful if you want different sorting than ascending.
+   
+   ```python
+   v = [5,8,9]
+   v.reverse()
+   v # [9,8,5]
+ 
+* copy() -> Returns a copy of this list, the advantage of this is that modifying the copy doesn't affect the original list.
+
+	```python
+	v = [4,5,6]
+	t = v.copy()
+	
+	v.append(7)
+	t.append(0)
+	
+	v # [4,5,6,7]
+	t # [4,5,6,0]
+	```
+	
+### List Comprehension
+
+The list comprehension is one of the coolest features of python at lists, this features is a fast way to create lists from sentences that usually require a lot of statements.
+
+The syntax is like this:
+
+```python
+list-name = [value-statement for-statement for-body]
+```
+
+Let's see what is this feature:
+
+* _list-name_ will be the name of your list
+* _value-statement_ will be a small statent or how this will be stored.
+* _for-statement_ is a `for` loop that will run and create the values that you want on your `value-statement`
+* _for-body_ is a possible body that may implies `if` statements
+
+Example:
+
+```python
+pow2 = [2 ** x for x in [1,2,3,4,5]]
+pow2 # [2, 4, 8, 16, 32]
+```
+
+In this example is visible how this works, the _value-statement_ turns to be: `2 ** x` and this is what the final value will be. The for only tooks every element on the list after the `in` and pass it as `x` to the _value-statement_.
+
+You can think of this as:
+
+```python
+pow2 = []
+for x in [1,2,3,4,5]:
+   pow2.append(2 ** x)
+```
+
+## Tuples
