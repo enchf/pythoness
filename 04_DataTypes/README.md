@@ -39,12 +39,12 @@ There's a popular usage of Python in the last years: Computer/Data Science. This
 This notation is easy to remember because it uses letters instead of numbers:
 
 1. Binary -> Start with a `0` and then add a 'b' or 'B' and finally put your binary number. Examples:
-	1. `0b101 -> 5` `0B1001 -> 9`  `0b101010 -> 42`
+   1. `0b101 -> 5` `0B1001 -> 9`  `0b101010 -> 42`
 2. Octal -> Start with a `0`, add a 'O' or 'o' and then put your number in base 8. Examples:
-	1. `0o10 -> 5` `0O11 -> 9` `0o40 -> 42`
-2. Hexadecimal -> Start with a `0`, add a 'x' or 'X' and then your number in base 16. Examples:
-	1. `0x5 -> 5` `0X9` `0x2A`
-	
+   1. `0o10 -> 5` `0O11 -> 9` `0o40 -> 42`
+3. Hexadecimal -> Start with a `0`, add a 'x' or 'X' and then your number in base 16. Examples:
+   1. `0x5 -> 5` `0X9` `0x2A`
+
 #### Type Conversion
 
 Usually when you perform operations between numbers you get with numbers of different types, for example you end adding **int**s to **float**s or even adding complex expecting **int**s as result.
@@ -236,93 +236,94 @@ Lists have their own set of _methods_ that helps working with their data. To acc
 Now that we understand which is a _method_ and _dot notation_ let's see what _methods_ a list have:
 
 * append(_element_) -> Add an element to the end of the list
-	
-	```
-	v = [2,4,9]
-	v.append("Sier") # [2, 4, 9, "Sier"]
-	```
-	
-* extend(_iterable_) -> Pass another _iterable_ data source and it will expand your list.
-	
-	```python
-	v = [3, 5, -1, 'perrito', 'a']
-	v.extend("Sier") # [3, 5, -1, 'perrito', 'a', 'S', 'i', 'e', 'r']
-	```
-	
-* insert(_index_, _element_) -> Put a certain _element_ into the position indicated by _index_, if _index_ is bigger than the size of the list the _element_ is added to the end of the list otherwise the element is added in the position and the elements on the next indexes are moved one space.
-	
-	```python
-	v = [3, 5, -1, 'perrito', 'a']
-	v.insert(0,2) # [-2, 3, 5, -1, 'perrito', 'a']
-	v.insert(12, 0) # [-2, 3, 5, -1, 'perrito', 'a', 0]	
-	```
-	
-* remove(_element_) -> Remove an _element_ from the list, if the element is not in the list an error is showed.
-	
-	```python
-	v = [3, 5, -1, 'perrito', 'a']
-	v.remove("perrito") # [-2, 3, 5, -1, 'a']
-	```
-	
-* pop() -> Returns the last element on the list and removes it from the list. If no elements are present on the list, it shows an error.
-	
-	```python
-	v = [3, 5, -1, 'a']
-	v.pop() # 'a'
-	v # [3, 5, -1]
-	```
-	
-* clear() -> Removes all elements from the list
-	
-	```
-	v = [3, 5, -1, 'a']
-	v.clear() # []
-	```
-	
-* index(_element_) -> Check for the index of a value inside of the list, if the list doesn't contain the _element_ it shows an error, else it returns an `int`
-	
-	```python
-	v = [2, 5, "Sier"]
 
-	v.index(5)
-	v.index("Ernesto")
-	```
-	
+  ```
+  v = [2,4,9]
+  v.append("Sier") # [2, 4, 9, "Sier"]
+  ```
+
+* extend(_iterable_) -> Pass another _iterable_ data source and it will expand your list.
+
+  ```python
+  v = [3, 5, -1, 'perrito', 'a']
+  v.extend("Sier") # [3, 5, -1, 'perrito', 'a', 'S', 'i', 'e', 'r']
+  ```
+
+* insert(_index_, _element_) -> Put a certain _element_ into the position indicated by _index_, if _index_ is bigger than the size of the list the _element_ is added to the end of the list otherwise the element is added in the position and the elements on the next indexes are moved one space.
+
+  ```python
+  v = [3, 5, -1, 'perrito', 'a']
+  v.insert(0,2) # [-2, 3, 5, -1, 'perrito', 'a']
+  v.insert(12, 0) # [-2, 3, 5, -1, 'perrito', 'a', 0]	
+  ```
+
+* remove(_element_) -> Remove an _element_ from the list, if the element is not in the list an error is showed.
+
+  ```python
+  v = [3, 5, -1, 'perrito', 'a']
+  v.remove("perrito") # [-2, 3, 5, -1, 'a']
+  ```
+
+* pop() -> Returns the last element on the list and removes it from the list. If no elements are present on the list, it shows an error.
+
+  ```python
+  v = [3, 5, -1, 'a']
+  v.pop() # 'a'
+  v # [3, 5, -1]
+  ```
+
+* clear() -> Removes all elements from the list
+
+  ```
+  v = [3, 5, -1, 'a']
+  v.clear() # []
+  ```
+
+* index(_element_) -> Check for the index of a value inside of the list, if the list doesn't contain the _element_ it shows an error, else it returns an `int`
+
+  ```python
+  v = [2, 5, "Sier"]
+
+  v.index(5)
+  v.index("Ernesto")
+  ```
+
 * count(_element_) -> Returns the number of occurrence of certain _element_ inside the list.
-	
-	```python
-	v = [2,4,2,8,0,2]
-	v.count(2) # Returns 3
-	```
+
+  ```python
+  v = [2,4,2,8,0,2]
+  v.count(2) # Returns 3
+  ```
 
 * sort() -> Makes the list to be sorted by the ascending and natural order of his elements. The elements must be of the same type to obtain all the elements ordered, if they aren't, then the list will try to order the elements and show an error for incompatible types. In case that an ascending order is "confusing" the list will order by the natural order of the elements.
-	
-	```python
-	v = [5,6,9,0,-1,3]
-	v.sort()
-	v # [-1, 0, 3, 5, 6, 9]
-	```
-	
+
+  ```python
+  v = [5,6,9,0,-1,3]
+  v.sort()
+  v # [-1, 0, 3, 5, 6, 9]
+  ```
+
 * reverse() -> Makes the list to be backwards of his original state. This means that last element now it's the first and first it's the last an so on. This could be useful if you want different sorting than ascending.
-   
-   ```python
+
+  ```python
    v = [5,8,9]
    v.reverse()
    v # [9,8,5]
- 
+  ```
+
 * copy() -> Returns a copy of this list, the advantage of this is that modifying the copy doesn't affect the original list.
 
-	```python
-	v = [4,5,6]
-	t = v.copy()
-	
-	v.append(7)
-	t.append(0)
-	
-	v # [4,5,6,7]
-	t # [4,5,6,0]
-	```
-	
+  ```python
+  v = [4,5,6]
+  t = v.copy()
+
+  v.append(7)
+  t.append(0)
+
+  v # [4,5,6,7]
+  t # [4,5,6,0]
+  ```
+
 ### List Comprehension
 
 The list comprehension is one of the coolest features of python at lists, this features is a fast way to create lists from sentences that usually require a lot of statements.
@@ -358,3 +359,81 @@ for x in [1,2,3,4,5]:
 ```
 
 ## Tuples
+
+And then, you have _tuples_, a _tuple_ is basically a **list** but with one small BUT VERY IMPORTANT difference: it's immutable.
+
+What does this means? What's the importance and the usage on an immutable data? Well, let's say that you can have a _list_ and pass it around functions or process but without the worry of losing data.
+
+Also, this structure beign immutable gives a boost on performance when iterating over the elements. Also, if you plan on using some elements as keys, or for example, constants, tuples are your answer.
+
+### Create a tuple
+
+This part can be tricky, but it's easier once it's learned.
+
+You have the literal option and the function option:
+
+#### Literal
+
+To create a tuple, you must indicate the elements inside a parenthesis:
+
+```python
+my_tuple = (1,2,3)
+```
+
+But what happens if you want a tuple with a single element? If you write `r = (1)` you don't get a _tuple_ instead you get an `int` and this is visible using: `type(r)` which return some text indicating that it's a `integer` 
+
+Then, how? Easy, when creating a _tuple_ of a single element, indicate that the second element doesn't exist: `r = (1,)` see? adding the `,` it's like saying: "Hey... here could be another element... but it isn't"
+
+#### function tuple()
+
+The function for creating a _tuple_ is just called: `tuple(i)` and it recives a parameter `i`  which is an _iterable_ object, like lists... yes, you can turn a list into a tuple just calling this function.
+
+```python
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list) # (1,2,3)
+```
+
+The advantage of this is that once we want to "lock" a list, we can just simply turn it into a tuple, like having a party and no allowing more invites.
+
+### Tuple indexing
+
+This will be fast: Accessing to elements in a tuple is as easy as in a List.
+
+That's it, using the `[index]` notation and creating slices with: `:` it's the same.
+
+### Tuple methods
+
+Tuples only have two methods and they are pretty straigth forward:
+
+* count(x) -> Returns the times the element _x_ is inside of the tuple
+* index(x) -> Returns the index where _x_ is located.
+
+Also, the other _built-in_ functions that work with iterable like `len()` or `str()` work with tuples. More on this in the built-in section.
+
+### Operators
+
+There's an specific case that we have to mention, tuples are immutable but you can use some operators to create new tuples, this operators are: `+` and `*`
+
+Using `+` with both operands as tuples returns a third tuple with the elements of both tuples
+
+```python
+j = (1, 3, 5)
+k = (2, 4, 6)
+t = j + k
+t # (1, 3, 5, 2, 4, 6)
+```
+
+And using the `*` returns a new tuple with the elements inside the tuple repetead in the order they are the _right operand_ times.
+
+```python
+j = ("Sier", "Ernesto")
+k = j * 3
+k # ("Sier", "Ernesto", "Sier", "Ernesto", "Sier", "Ernesto")
+```
+
+## Set
+
+
+
+## Dictionary
+
