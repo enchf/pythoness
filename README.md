@@ -8,10 +8,10 @@ foundations of Python Programming Language, focused on _Devops_ tasks. It has be
 
 ## Contents
 
-* [Overview](01_Overview/README.md) - Overview, Installation, Tools (pyenv, virtualenv), Modules (pip, without pip).
+* [Overview](01_Overview/README.md) - Overview, Installation, Tools (pyenv, virtualenv), Modules (pip, others).
 * [Basic Language Syntax](02_Syntax/README.md) - Identifiers, reserved words, operators, indentation, comments, variables.
-* [Control Structures](03_ControlStructures/README.md) - Flow control, Loops.
-* [Data Types](04_Types/README.md) - Strings, Arrays, Dictionaries, Functions, Lambdas, Exceptions, Regex. 
+* [Control Structures](03_ControlStructures/README.md) - Flow control, Loops, Comprehension Lists.
+* [Data Types](04_Types/README.md) - Strings, Arrays, Dictionaries, Functions & Scopes, Lambdas, Exceptions, Regex. 
 * [Modules](05_Modules/README.md) - Modules, Namespaces, Packages.
 * [Standard Library](06_StdLib/README.md) - Sys, STDIO, External Programs, IO, Email, Network and HTTP, Dates, Zip Files.
 * [Debug & Unit Testing](07_Debug_Test/README.md) - Unittest, Logs, Debug Tools.
