@@ -318,6 +318,114 @@ even_numbers = list(filter(lambda x: x % 2 == 0, [1,2,3,4,5,6]))
 even_numbers # [2,4,6]
 ```
 
-
-
 ## Exceptions
+
+An `Exception` is a situation that suddenly occurs and it wasn't part of the beahivour. For example, turning something from a `string` into an integer like:
+
+```python
+v = int("sier")
+```
+
+This happens because python doesn't know how you want to turn letters into numbers... so an `Exception` occurs, this `Exception` usually are called `XError` where `X` is replaced with the type of error that happend, for example a `SyntaxError`.
+
+### Types of Exceptions
+
+Below is a list of built-in errors that you can found while working with python:
+
+| Exception             | Cause of Error                           |
+| --------------------- | ---------------------------------------- |
+| AssertionError        | Raised when `assert` statement fails.    |
+| AttributeError        | Raised when attribute assignment or reference fails. |
+| EOFError              | Raised when the `input()` functions hits end-of-file condition. |
+| FloatingPointError    | Raised when a floating point operation fails. |
+| GeneratorExit         | Raise when a generator's `close()` method is called. |
+| ImportError           | Raised when the imported module is not found. |
+| IndexError            | Raised when index of a sequence is out of range. |
+| KeyError              | Raised when a key is not found in a dictionary. |
+| KeyboardInterrupt     | Raised when the user hits interrupt key (Ctrl+c or delete). |
+| MemoryError           | Raised when an operation runs out of memory. |
+| NameError             | Raised when a variable is not found in local or global scope. |
+| NotImplementedError   | Raised by abstract methods.              |
+| OSError               | Raised when system operation causes system related error. |
+| OverflowError         | Raised when result of an arithmetic operation is too large to be represented. |
+| ReferenceError        | Raised when a weak reference proxy is used to access a garbage collected referent. |
+| RuntimeError          | Raised when an error does not fall under any other category. |
+| StopIteration         | Raised by `next()` function to indicate that there is no further item to be returned by iterator. |
+| SyntaxError           | Raised by parser when syntax error is encountered. |
+| IndentationError      | Raised when there is incorrect indentation. |
+| TabError              | Raised when indentation consists of inconsistent tabs and spaces. |
+| SystemError           | Raised when interpreter detects internal error. |
+| SystemExit            | Raised by sys.exit() function.           |
+| TypeError             | Raised when a function or operation is applied to an object of incorrect type. |
+| UnboundLocalError     | Raised when a reference is made to a local variable in a function or method, but no value has been bound to that variable. |
+| UnicodeError          | Raised when a Unicode-related encoding or decoding error occurs. |
+| UnicodeEncodeError    | Raised when a Unicode-related error occurs during encoding. |
+| UnicodeDecodeError    | Raised when a Unicode-related error occurs during decoding. |
+| UnicodeTranslateError | Raised when a Unicode-related error occurs during translating. |
+| ValueError            | Raised when a function gets argument of correct type but improper value. |
+| ZeroDivisionError     | Raised when second operand of division or modulo operation is zero. |
+
+### Handling Exceptions
+
+Because of how the exceptions can appear and because we don't want to scary the user, we can handle the moments when an exception occurs.
+
+This is possible thanks to three reserved words: `try`, `except` and `finally` 
+
+This words work in that order:
+
+`try` to do something that could fail
+
+`except` if this error happens
+
+`finally` clear some data from somewhere or do something else.
+
+An example could be:
+
+```python
+try:
+    v = 2 / 0
+   	print(v) # Unreachable because of a ZeroDivisionError
+except:
+    print("Division by zero not posible")
+finally:
+    pass
+```
+
+The third part, the `finally` is optional, mostly used to close files, notify the UI or maybe closing some connections, but if you include the `finally` in your flow, the `finally` is always executed.
+
+You can actually use the second part, the `except` to manage an special case or multiple cases or in the last example, all the posible Errors.
+
+The next example show the different ways to manage exceptions:
+
+```python
+try:
+   # do something
+
+except ValueError:
+   # handle ValueError exception
+
+except (TypeError, ZeroDivisionError):
+   # handle multiple exceptions
+   # TypeError and ZeroDivisionError
+   
+except:
+   # handle all other exceptions
+```
+
+As you notice, the parts below the `try` and the `except` are blocks of code that need indentation.
+
+### Creating a Exception
+
+If you want to _fail fast_ when something is wrong on the flow of the code, you can `raise` an Exception, this means that you can stop execution at certain point and notify that something went wrong, then, who called your function will have to handle this sudden error.
+
+Doing it it's straight forward:
+
+```python
+def funct(x):
+    if type(x) != type(0):
+        raise Exception("Parameter must be an int")
+```
+
+The calling to `raise Exception("Parameter must be an int")` does the magic, the string passed to the `Exception` represents the message to show when the exception raises.
+
+There'r mostly all we can say about Exceptions without touching other topics that will be discussed later.
