@@ -149,7 +149,22 @@ For a more advanced usage of commands, see [Command documentation at Github](htt
 
 ### virtualenv
 
+Virtualenv is basically the same tool but for library versions. It creates an _isolated environment_ for an specific
+project/library, doesn't shared with other virtual environments. This lets you:
 
+* Run an application with its own dependencies.
+* Have two applications running no matter if each one use a different version of a specific library.
+* Install a new application no matter if is incompatible with global versions of Python installed libraries.
+
+For installation notes, go to the [official documentation](https://virtualenv.pypa.io/en/stable/).
+
+#### List of basic commands
+
+| Action | Command | Notes |
+|--------|---------|-------|
+| Create an environment | virtualenv _directory_ | Directory is the folder where the environment will be installed |
+| Install/run packages/scripts | Use python and pip commands as normal | Commands will point at _directory_/lib installed versions |
+| Options to virtualenv command | Check official documentation | [Advanced options of virtualenv](https://virtualenv.pypa.io/en/stable/reference/#virtualenv-command) |
 
 * * * * * *
 
