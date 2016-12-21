@@ -123,9 +123,33 @@ To read more about this tool, look at the [latest documentation website](https:/
 
 ## Version Tools
 
+There are tools that let you work with specific versions of either Python or libraries. An important characteristic is
+that these tools follow the UNIX principle of single-purpose things tools.
+
 ### pyenv
 
+Pyenv lets you install and switch between multiple versions of Python in an easy way. When dealing with existing scripts
+or different environments, it could be useful to have a mechanism to manage different versions of Python as per environment.
+Moreover, to test these scripts/projects locally. This is achieved by the use of shims in the front of your PATH. The shim
+_intercepts_ the call to python/pip commands and let pyenv determine the version to use.
+
+#### List of basic commands
+
+| Action | Command | Notes |
+|--------|---------|-------|
+| Set a local version | pyenv local 3.3.5 | Multiple versions can be set, see advanced usage |
+| Set the global version | pyenv global 2.7.6 | Sets the Python version to be used in all shells |
+| Install a Python version | pyenv install 3.3.5 | Use --list to get all available versions |
+| Uninstall a Python version | pyenv uninstall 3.3.3 | Use -f to avoid confirmation |
+| Rehasing existing binaries | pyenv rehash | If you install binaries for a new version of Python, run this command |
+| Get the shell/project version | pyenv version | Use versions to list all available versions through pyenv |
+
+For installation notes and guides, go to the official [Github project page](https://github.com/yyuu/pyenv).
+For a more advanced usage of commands, see [Command documentation at Github](https://github.com/yyuu/pyenv/blob/master/COMMANDS.md).
+
 ### virtualenv
+
+
 
 * * * * * *
 
