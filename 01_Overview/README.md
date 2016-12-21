@@ -58,19 +58,69 @@ use **Mac Ports** or **Homebrew** if you want to install Python 3.
 You can have both Python 2 and 3 living in your operating system. You can set aliases to make _python_ command to point
 to either version 2 or 3, as per your convenience. 
 
-## Tools
+## Modules
+
+Finding and installing new modules is a very straightforward operation in Python with tools like _pip_ and _easy_install_.
+Pip is a package manager tool that allows you to install external modules/libraries onto the Python installation (global). 
+Pip comes installed with Python or can be installed using get-pip tools.
+
+For a full documentation about pip, see the [official documentation](https://pip.pypa.io/en/stable/quickstart/).
+
+An alternative to pip is easy_install. Easy_install came into the scene before pip did, and both of them are built on
+*setuptools* components, which is a library to maintain and create Python packages for projects. For more information
+about these tools you can go to [easy_install official site](http://peak.telecommunity.com/DevCenter/EasyInstall) and
+[setuptools official documentation](https://setuptools.readthedocs.io/en/latest/).
+
+The main difference between pip and easy_install are listed below:
+
+| Feature | pip | easy_install |
+|---------|-----|--------------|
+| Installation format | _Flat_ packages with _egg-info_ metadata | Encapsulated _Egg_ format (more information below) |
+| Operations for installed packages | Uninstall, List, Freeze | Multi-version installs, sys.path modification |
+| Special operations | Dependency overriding via requirements files | pylauncher support, install from Egg files |
+
+### pip
+
+Pip command supports installing from [PyPi (Python Package Index)](https://pypi.python.org/pypi/), from version control,
+local projects and distribution files.
+
+| Operation | Command | Notes |
+|-----------|---------|-------|
+| Install a package | pip install package-name | pip as of version 6.1.0 install dependencies before their dependents |
+| Install a specific version | pip install package==1.0.1 | Minimum and maximum versions can be specified |
+| Uninstall a package | pip uninstall package-name | When upgrading perform an automatic uninstall in backwards |
+| List installed packages | pip list | Add --outdated to include outdated installed packages |
+| Show details about a package | pip show package-name | Add -f to show the full list of installed files |
+| Search for a package | pip search _query_ | Search for PyPI packages whose name or summary contains _query_ |
+| Export installed packages | pip freeze | Generates output suitable for a _requirements file_ | 
+
+For an extensive guide on installation packages, look at [pip installation guide](https://pip.pypa.io/en/stable/user_guide/).
+
+#### Installation from a requirements file
+
+Requirements files are files containing a list of packages/libraries to be installed using pip. They hold the result from
+a pip freeze command execution to achieve repeatable installations. These files also force pip to resolve dependencies. 
+
+Sample of a requirements file:
+
+```
+docutils==0.11
+Jinja2==2.7.2
+MarkupSafe==0.19
+Pygments==1.6
+Sphinx==1.2.2
+```
+
+For more information about the requirements file format, see the [full reference](https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format).
+
+### easy_install
+
+## Version Tools
 
 ### pyenv
 
 ### virtualenv
 
-## Modules
-
-### Finding and Installing new modules
-
-#### With pip
-
-#### Without pip
 * * * * * *
 
 And that's it for just an introduction, now let's get real with the Labs and the Homework before getting into the 
