@@ -11,7 +11,8 @@ foundations of Python Programming Language, focused on _Devops_ tasks. It has be
 * [Overview](01_Overview/README.md) - Overview, Installation, Tools (pyenv, virtualenv), Modules (pip, others).
 * [Basic Language Syntax](02_Syntax/README.md) - Identifiers, reserved words, operators, indentation, comments, variables.
 * [Control Structures](03_ControlStructures/README.md) - Flow control, Loops, Comprehension Lists.
-* [Data Types](04_Types/README.md) - Strings, Arrays, Dictionaries, Functions & Scopes, Lambdas, Exceptions, Regex. 
+* [Data Types](04_DataTypes/README.md) - Strings, Lists, Sets,  Dictionaries.
+  * [Other types](04_DataTypes/others/README.md) - Functions & Scopes, Lambdas, Exceptions. 
 * [Modules](05_Modules/README.md) - Modules, Namespaces, Packages.
 * [Standard Library](06_StdLib/README.md) - Sys, STDIO, External Programs, IO, Email, Network and HTTP, Dates, Zip Files.
 * [Debug & Unit Testing](07_Debug_Test/README.md) - Unittest, Logs, Debug Tools.
@@ -19,10 +20,10 @@ foundations of Python Programming Language, focused on _Devops_ tasks. It has be
 ## In-Person Training
 
 Personal training can be conducted by any of the project creators. Just contact us through LinkedIn:
- 
- * [Sier](https://www.linkedin.com/in/sierisimo)
- * [Ernesto](https://www.linkedin.com/in/ernestoespinosach)
- 
+
+* [Sier](https://www.linkedin.com/in/sierisimo)
+* [Ernesto](https://www.linkedin.com/in/ernestoespinosach)
+
 ## License & Copyright
 
 The materials herein are all (c) 2016 Sier Valencia/Ernesto Espinosa.
