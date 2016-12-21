@@ -115,6 +115,12 @@ For more information about the requirements file format, see the [full reference
 
 ### easy_install
 
+_easy_install_ was the previous tool to install packages in Python but its use has been discontinued and discouraged
+in favour of *pip*. This tool uses _egg_ files, which basically are zip files with metadata (a similar structure as
+jar/war files in Java). 
+
+To read more about this tool, look at the [latest documentation website](https://setuptools.readthedocs.io/en/latest/easy_install.html).
+
 ## Version Tools
 
 ### pyenv
