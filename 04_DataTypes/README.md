@@ -433,7 +433,78 @@ k # ("Sier", "Ernesto", "Sier", "Ernesto", "Sier", "Ernesto")
 
 ## Set
 
+A _set_ is basically a data structure where the inner elements doesn't repeat. They are unique.
 
+For creating a set you only have to use: `name = {element1, element2, ...}`
+
+It's important to notice that the elements in a set must be immutable, this means that putting a list inside of a set it's not possible. But set by themselves aren't immutable, this means that you can add or remove elements, even there are special operations available for sets, like _union_ and _intersection_.
+
+The Sets will be covered in future versions of this document, for now, just think that most of the built-in functions defined before also work with sets.
 
 ## Dictionary
 
+A dictionary is a data structure that contains a group of combined _key_:_value_ elements, this means that the access to the elements in the dictionary are made by the _key_ and not by index.
+
+In other languages this is called a **map** but the correctness of the name applies for dictionary.
+
+In a dictionary in python you can assign any value to a key, the only rule is that the key **MUST** be an immutable data type. This means basically 3 types of keys: `number`, `string` and `tuple`.
+
+The values aren't so prohibitibe, this means that you can assign numbers, strings, tuples, lists, objects, functions and even other dictionarys to a single key.
+
+Just remember that your key MUST be unique, this means that if you are planning on using the same key for multiple values you may loose the values.
+
+To creat a dictionary you only need to define the key:value relations between `{}`
+
+```python
+mDict = {}
+oDict = {
+    2: "perrito", 
+    "dogo": 3, 
+    (1,2): [-1], 
+    "d": {1:1} 
+}
+```
+
+### Accessing elements on a Dictionary
+
+To access elements in a dictionary you have two options, one is the `[]` notation using the _key_ instead of an index or using the method: `dictionary.get` where `dictionary` corresponds to your dictionary.
+
+### Methods on Dictionaries
+
+| Method                 | Description                              |
+| ---------------------- | ---------------------------------------- |
+| ` clear()`             | Remove all items form the dictionary.    |
+| ` copy()`              | Given the nature of the dictionary, to operate over it's elements without affecting the original nature it's necessary to create a copy and letting the original to |
+| `get(key, default)`    | Return the value of _key_. If _key_ does not exit, return _default_ (defaults to `None`). |
+| `fromkeys(seq)`        | Return a new dictionary with keys from _seq_. This method is used most of the time with a _list_ |
+| ` items()`             | Return a new view of the dictionary's items (key, value). |
+| ` keys()`              | Return a new view of the dictionary's keys. |
+| ` pop(key[,d])`        | Remove the item with _key_ and return its value or _d_ if _key_ is not found. If _d_ is not provided and _key_ is not found, raises `KeyError`. |
+| ` popitem()`           | Remove and return an arbitary item (key, value). Raises `KeyError` if the dictionary is empty. |
+| ` setdefault(key[,d])` | If key is in the dictionary, return its value. If not, insert key with a value of d and return d (defaults to `None`). |
+| ` update([other])`     | Update the dictionary with the key/value pairs from other, overwriting existing keys. |
+| ` values()`            | Return a new view of the dictionary's values |
+
+### Dictionary comprehension
+
+A Dictionary can be created as well as with the built-in functions or literal notation but it also is posible to use the "comprehension" notation previously discussed in lists.
+
+The only difference is that you must provide a way to create the key and a way to create the value:
+
+```python
+odd_squares = {x: x*x for x in range(11) if x%2 == 1}
+```
+
+### Built-in functions
+
+Some of the python built-in functions are available to use with dictionaries, this functions are:
+
+| Function    | Description                              |
+| ----------- | ---------------------------------------- |
+| `all()`     | Return `True` if all keys of the dictionary are true (or if the dictionary is empty). |
+| ` any()`    | Return `True` if any key of the dictionary is true. If the dictionary is empty, return `False.` |
+| ` len()`    | Return the length (the number of items) in the dictionary. |
+| ` cmp()`    | Compares items of two dictionaries.      |
+| ` sorted()` | Return a new sorted list of keys in the dictionary. |
+
+This covers almost all the _basic_ data-types that Python has built-in, some other types are available via modules and libraries or even by OOP... but that topics will be discussed later.
