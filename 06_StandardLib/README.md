@@ -116,7 +116,9 @@ Options for mode:
 | b | File type | Binary file |
 | t | File type | Text file |
 
-
+We have different API's for each file type. For text files, the API refers to the class 
+[TextIOBase](https://docs.python.org/3/library/io.html#io.TextIOBase), and for binaries the API refers to the class
+[BuffededIOBase](https://docs.python.org/3/library/io.html#io.BufferedIOBase).
 
 For an extensive detail on the open function, take a look at the [official documentation](https://docs.python.org/3/library/functions.html#open).
 
@@ -155,12 +157,53 @@ More functions available at [fileinput documentation](https://docs.python.org/3/
 
 ## Zip Files
 
+Python provides a class to work with ZIP files called _ZipFile_. This class encapsulates basic and common operations to
+be done with zip files. ZipFile class can be instantiated in the following way:
+ 
+```python
+from zipfile import ZipFile
+with ZipFile('all.zip', 'w') as myzip:
+    myzip.write('anotherfile.txt')
+```
+
+Syntax is similar to what we saw in _open_ function: The first argument is the name of the file and the second argument
+is the mode. It accepts r (read only), w (write), x (exclusive open for creation and writing) and a (appending) as 
+opening modes. Here are the most used functions and below an usage sample.
+
+| Function | Description |
+| zipfile.is_zipfile(filename) | Checks whether a file is a zip file. This function is not part of Zipfile class and can be invoked directly |
+| ZipFile.close() | Closes the archive. If changes are done and close is not invoked, those changes will be lost |
+| ZipFile.namelist() | Returns a list of archive members by name |
+| ZipFile.open(name, mode='r', pwd=None) | Opens a file from the zip file. Accepts the same arguments in mode and also an (optional) password |
+| ZipFile.extract(name, path=None, pwd=None) | Extracts the specified file at path (if not specified, at the same directory) |
+| ZipFile.extractAll(path=None, members=None, pwd=None) | Extracts all the files or a subset specified by _members_ |
+| ZipFile.read(name, pwd=None) | Read the bytes of the file _name_ |
+| ZipFile.write(file, arcname=None, compress_type=None) | Writes a file to the archive, with (optional) name _arcname_ and a specified compression type |
+| ZipFile.setpassword(pwd) | Set a password as default for all operations over the file |
+
+For the full documentation, go to the [zipfile API docs](https://docs.python.org/3/library/zipfile.html).
+
 ## Calling External Programs
+
+```python
+```
 
 ## Email
 
+```python
+```
+
 ## Network & HTTP
+
+```python
+```
 
 ## Dates
 
+```python
+```
+
 ## Regex
+
+```python
+```
