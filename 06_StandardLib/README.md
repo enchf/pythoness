@@ -185,8 +185,21 @@ For the full documentation, go to the [zipfile API docs](https://docs.python.org
 
 ## Calling External Programs
 
+The _subprocess_ module allows you to spawn new processes, connect to their input/output/error pipes, 
+and obtain their return codes. It encapsulates all operation into the run command (see description and example below),
+for previous versions of _subprocess_ check the [older high level API](https://docs.python.org/3/library/subprocess.html#call-function-trio).
+
+Example of usage:
+
 ```python
+import subprocess
+
+subprocess.run(["ls", "-l"]) # Only runs, does not capture output.
+subprocess.run(["ls", "-l"], stdout=subprocess.PIPE) # Captures the output setting a PIPE to stdout.
 ```
+
+More arguments and be set and configured for this function. For more details, 
+check [subprocess official documentation](https://docs.python.org/3/library/subprocess.html)
 
 ## Email
 
