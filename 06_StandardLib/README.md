@@ -268,8 +268,18 @@ print(r1.status, r1.reason)
 
 ## Dates
 
+Parsing dates is a very comon task when dealing with text files and logs. Python provides a full module, called _datetime_,
+to work with date manipulation and parsing.
+
+To parse a date from a string, use the _strptime_ method as follows:
+
 ```python
+from datetime import datetime
+datetime.strptime('30-01-12', '%d-%m-%y').date()
 ```
+
+Go to the official documentation for a complete documentation of [date operations](https://docs.python.org/3/library/datetime.html)
+and [date formatting behavior](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior).
 
 ## Regex
 
