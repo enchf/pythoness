@@ -171,6 +171,7 @@ is the mode. It accepts r (read only), w (write), x (exclusive open for creation
 opening modes. Here are the most used functions and below an usage sample.
 
 | Function | Description |
+|----------|-------------|
 | zipfile.is_zipfile(filename) | Checks whether a file is a zip file. This function is not part of Zipfile class and can be invoked directly |
 | ZipFile.close() | Closes the archive. If changes are done and close is not invoked, those changes will be lost |
 | ZipFile.namelist() | Returns a list of archive members by name |
@@ -203,8 +204,29 @@ check [subprocess official documentation](https://docs.python.org/3/library/subp
 
 ## Email
 
+The easiest way to send e-mail in Python is through the _smtplib_ module. It requires a SMTP server running 
+to be invoked from Python library to allow us the send operation.
+
+A smtp object can be get from the SMTP function and the hostname:
+
 ```python
+import smtplib
+smtpobj = smtplib.SMTP("localhost")
 ```
+
+After this, we can invoke _sendemail_ function to prepare a message:
+
+```python
+import smtplib
+try:
+    smtpobj = smtplib.SMTP('localhost')
+    smtpobj.sendmail("sender@email", ["receivers@email", "receivers_@email"], "message")         
+    print("Successfully sent email")
+except:
+    print("Error: unable to send email")
+```
+
+For more extensive details, look at the [official documentation](https://docs.python.org/3/library/smtplib.html).
 
 ## Network & HTTP
 
