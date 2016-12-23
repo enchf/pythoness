@@ -222,7 +222,7 @@ try:
     smtpobj = smtplib.SMTP('localhost')
     smtpobj.sendmail("sender@email", ["receivers@email", "receivers_@email"], "message")         
     print("Successfully sent email")
-except:
+except smtplib.SMTPException:
     print("Error: unable to send email")
 ```
 
@@ -230,7 +230,40 @@ For more extensive details, look at the [official documentation](https://docs.py
 
 ## Network & HTTP
 
+Python enables the communication with HTTP protocol through the class _HTTPConnection_, located at http.client module.
+Also enables other kind of connections, like HTTPS. To keep it simple and pragmatic, we will show an example for normal
+HTTP connection.
+
+First of all, a connection is obtained using the host and the port:
+
 ```python
+import http.client
+
+connection = http.client.HTTPConnection("localhost", 8080)
+```
+
+This connection object can be used to perform a wide set of operations, being _request_ and _getresponse_ the fundamental
+ones. The former allows you to perform an HTTP request, while the latter allows you to parse and get data from the server
+response. Below you will find a table of useful methods:
+
+| Class.Method | Description |
+|--------|-------------|
+| HttpConnection.request(method, url, body=None, headers={}) | Performs the request using the _method_ against the relative _url_. A request _body_ and _headers_ can be set |
+| HttpConnection.getresponse() | Called after a request is sent, returns an [HTTPResponse](https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse) object |
+| HttpConnection.close() | Closes the connection with the server |
+| HttpRequest.read() | Reads and returns the response body. Also the method readinto(b) allows to put the response into the buffer _b_ |
+| HttpRequest.getheader(name) | Returns the header with the specified _name_ |
+| HttpRequest.status | Response status |
+| HttpRequest.reason | Response reason |
+
+Usage sample:
+
+```python
+import http.client
+conn = http.client.HTTPSConnection("server.url")
+conn.request("GET", "/index.html")
+r1 = conn.getresponse()
+print(r1.status, r1.reason)
 ```
 
 ## Dates
