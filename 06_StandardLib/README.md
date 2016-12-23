@@ -273,5 +273,38 @@ print(r1.status, r1.reason)
 
 ## Regex
 
+Regular expressions are a very wide topic in a programming language. They allow you to create string patterns to be
+matched in strings, instead of parsing directly the string to identify certain stuff. Things like identifying numbers,
+emails, formats, to determine if a string ends or starts with certain pattern of characters, can be done quickly (but
+sometimes a bit tricky) using regular expressions.
+
+A very simple usage is the following, which checks if a string is composed only by numbers. If there is no match, 
+_match_ method returns _None_:
+
 ```python
+import re
+x = re.compile("[0-9]+")
+print(x.match("12345"))
 ```
+
+A list of important and interesting methods and meta-characters (characters used to build the regular expression, 
+*henceforth regex*) are compiled below:
+
+| Expression | Belongs to | Description |
+|------------|------------|-------------|
+| re.compile(pattern) | re class | Compiles a pattern and returns a regex object. Another way to get a regex is with this syntax: r'-pattern-here-' | 
+| re.search(pattern, string) | re class | Search for a pattern in a string |
+| match(string) | regex object | Tries to match a regex into a string. Returns a _match object_ |
+| m.group(*indexes) | match object | Return a single string or a tuple of length of _indexes_ with all the matched groups in the string |
+| m.start(group), m.end(group) | match object | Return the start and end positions of the substring matched by _group_ | 
+| [ ] | meta-character | Used for ranges or groups of characters: [abc] match any of a, b or c, while [a-z] matches any between a and z |  
+| ( ) | meta-character | Group expressions to have subgroups of the matched string |
+| \w \W | meta-character | Lower case matches alphanumeric strings, upper matches non-alphanumerics |
+| \d \D | meta-character | Lower matches digit strings, upper matches non-digit |
+| \s \S | meta-character | Lower matches whitespace strings, upper non-whitespace |
+| ^ $ | meta-character | ^ indicates the beginning of the string, $ indicates the end |
+| * + | meta-character | At the end of a pattern, * indicates 0 or more occurrences, while + indicates 1 or more occurrences |
+
+The [full documentation](https://docs.python.org/3/howto/regex.html) for regular expressions in Python is available in
+a guide form. To leverage this small training, and if you are interested in deeper concepts, take a look into the official
+guide.
