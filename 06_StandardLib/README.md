@@ -83,12 +83,75 @@ Note: print cannot be used for binaries.
 
 ## IO
 
+We will cover basic operations for working with files with two libraries: _open_ and _fileinput_.
+
 ### open
+
+Open is a built-in function that can easily create file streams (text or binary). It is configured by a parameter called
+_mode_, which indicates the type of the file (read or binary) and how the file will be used (read-only, write, append).
+
+Sample usage:
+
+```python
+f = open("filename", "r", encoding="utf-8")
+
+or 
+
+with open("file","r") as f:
+    pass
+```
+
+The first argument is the file name and the second argument is the opening mode. There are more optional parameters but
+for simplicity we will cover only these two and _encoding_, which is a string indicating (as its name says) the file
+encoding type.
+
+Options for mode:
+
+| Character | Type | Usage |
+|-----------|------|-------|
+| r | Opening mode | Open for read only (default) |
+| w | Opening mode | Open for writing, truncating the file first |
+| x | Opening mode | Exclusive creation, failing if the file already exists |
+| a | Opening mode | Open for writing, appending to the end if the file exists |
+| b | File type | Binary file |
+| t | File type | Text file |
+
+
+
+For an extensive detail on the open function, take a look at the [official documentation](https://docs.python.org/3/library/functions.html#open).
 
 ### fileinput
 
-### tempfile
+Fileinput is an special module that allows to iterate over an input or even more standard input. The first argument 
+can be a list of files (see below) or if empty standard input.
 
+```python
+import fileinput
+for line in fileinput.input():
+    print(line)
+    
+or
+
+with fileinput.input(files=('file1.txt', 'file2.txt')) as f:
+    for line in f:
+        print(line)
+    print("Lines of " + fileinput.filename())
+```
+
+When iterating, fileinput provides helper functions as global state of the file being iterated. We can see above that 
+after getting the reference to a file, we invoked fileinput.filename() as a global state to get the file name and print
+it to the standard output. This is a list of functions that can be used in that way:
+
+| Function | Description |
+|----------|-------------|
+| filename() | Name of the current file being read |
+| lineno() | Cumulative line numbers being read |
+| filelineno() | Cumulative line number of the file being read |
+| isfirstline() | True if its the first line being read of the file, false otherwise |
+| nextfile() | Close the current file and go to the next if any |
+| close() | Close the sequence |
+
+More functions available at [fileinput documentation](https://docs.python.org/3/library/fileinput.html#fileinput.input).
 
 ## Zip Files
 
